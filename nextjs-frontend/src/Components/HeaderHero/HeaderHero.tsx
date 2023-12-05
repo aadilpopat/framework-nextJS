@@ -13,6 +13,7 @@ const HeaderHero = async () => {
 			</div>
 			<div className='extend-right pl-20'>
 				<Image
+					priority
 					src={headerHeroFields.image.mediaItemUrl}
 					alt='test'
 					width={headerHeroFields.image.mediaDetails.width}
