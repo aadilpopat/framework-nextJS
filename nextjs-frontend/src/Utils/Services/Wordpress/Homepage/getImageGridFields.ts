@@ -42,7 +42,7 @@ const getImageGridFields = async () => {
 	`;
 
 	const data = await fetchAPI<IImageGridFields>(requestQuery);
-	
+
 	return data.pageBy.imageGrid;
 };
 export default getImageGridFields;

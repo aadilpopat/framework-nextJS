@@ -1,19 +1,22 @@
 import React from 'react';
-import getAccordionFields from '@/Utils/Services/Wordpress/Homepage/getAccordionFields';
 import Link from 'next/link';
 import Image from 'next/image';
+import getAccordionFields from '@/Utils/Services/Wordpress/Homepage/getAccordionFields';
 
 const Accordion = async () => {
 	const accordionFields = await getAccordionFields();
 	const link = accordionFields.ctaButton;
-	let accordionSections: any[] = [];
+	const accordionSections = [];
 
-	for (let i = 0; i <= 5; i++) {
+	for (let i = 0; i <= 5; i += 1) {
 		accordionSections.push(
-			<details className='group mb-30'>
+			<details
+				className='group mb-30'
+				key={`accordion-section-${i}`}
+			>
 				<summary className='flex w-full cursor-pointer flex-nowrap place-items-baseline justify-between border-b border-b-white-300 md:grid md:grid-cols-10'>
 					<span className='mr-30 inline-block text-copy md:col-span-1 md:mr-0'>
-						{i}
+						{(i + 1).toString().padStart(2, '0')}
 					</span>
 					<h5 className='text-heading-xsmall mb-26 text-green-100 md:col-span-8 md:mb-8'>
 						{accordionFields.sectionHeading}
@@ -22,21 +25,21 @@ const Accordion = async () => {
 						<span className='absolute right-0 opacity-100 group-open:opacity-0'>
 							<Image
 								priority
-								src={'/images/plus-icon.svg'}
+								src='/images/plus-icon.svg'
 								alt='plus icon'
-								width={21}
-								height={21}
-								className='h-auto w-auto'
+								width={0}
+								height={0}
+								className='h-auto w-full'
 							/>
 						</span>
 						<span className='absolute right-0 flex items-center opacity-0 group-open:opacity-100'>
 							<Image
 								priority
-								src={'/images/minus-icon.svg'}
+								src='/images/minus-icon.svg'
 								alt='plus icon'
-								width={21}
-								height={21}
-								className='h-auto w-auto'
+								width={0}
+								height={0}
+								className='h-auto w-full'
 							/>
 						</span>
 					</div>

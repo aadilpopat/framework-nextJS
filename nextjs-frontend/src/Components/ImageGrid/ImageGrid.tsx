@@ -1,6 +1,6 @@
 import React from 'react';
-import getImageGridFields from '@/Utils/Services/Wordpress/Homepage/getImageGridFields';
 import Image from 'next/image';
+import getImageGridFields from '@/Utils/Services/Wordpress/Homepage/getImageGridFields';
 
 const ImageGrid = async () => {
 	const imageGridFields = await getImageGridFields();
@@ -11,7 +11,7 @@ const ImageGrid = async () => {
 	const row3Height = 'md:h-[670px]';
 	const row4Height = 'md:h-[371px]';
 
-	//Mobile Image Height
+	// Mobile Image Height
 	const mobileHeight1 = 'h-[335px]';
 	const mobileHeight2 = 'h-[400px]';
 

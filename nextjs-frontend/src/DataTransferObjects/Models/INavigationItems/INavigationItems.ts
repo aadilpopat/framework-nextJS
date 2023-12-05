@@ -11,6 +11,6 @@ export default interface INavigationItems {
 
 export interface IMenuItem {
 	databaseID: string;
-	url: URL;
+	url: string;
 	label: string;
 }

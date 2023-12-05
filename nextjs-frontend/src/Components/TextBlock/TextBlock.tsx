@@ -1,6 +1,6 @@
 import React from 'react';
-import getTextBlockFields from '@/Utils/Services/Wordpress/Homepage/getTextBlockFields';
 import Link from 'next/link';
+import getTextBlockFields from '@/Utils/Services/Wordpress/Homepage/getTextBlockFields';
 
 const TextBlock = async () => {
 	const textBlockFields = await getTextBlockFields();

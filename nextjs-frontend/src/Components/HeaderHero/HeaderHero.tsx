@@ -1,6 +1,6 @@
 import React from 'react';
-import getHeaderHeroFields from '@/Utils/Services/Wordpress/Homepage/getHeaderHeroFields';
 import Image from 'next/image';
+import getHeaderHeroFields from '@/Utils/Services/Wordpress/Homepage/getHeaderHeroFields';
 
 const HeaderHero = async () => {
 	const headerHeroFields = await getHeaderHeroFields();

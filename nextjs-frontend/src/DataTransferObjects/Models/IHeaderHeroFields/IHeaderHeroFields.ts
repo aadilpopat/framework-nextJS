@@ -7,4 +7,4 @@ export default interface IHeaderHeroFields {
 			image: IImage;
 		};
 	};
-};
+}
