@@ -204,3 +204,23 @@ if ( ! function_exists( 'twentytwentyfour_pattern_categories' ) ) :
 endif;
 
 add_action( 'init', 'twentytwentyfour_pattern_categories' );
+
+// Register Menus
+add_action('init', function () {
+	register_nav_menus([
+		// Using array to specify more menus if needed
+		'main-menu' => __('Main Menu'), // Main Navigation
+		'footer-menu-top' => __('Footer Menu - Top'), // Main Footer Navigation
+		'footer-menu-bottom' => __('Footer Menu - Bottom') // Main Footer Navigation
+	]);
+});
+
+//Add Additional Class Names on li
+function add_additional_class_on_li($classes, $item, $args)
+{
+	if (isset($args->add_li_class)) {
+		$classes[] = $args->add_li_class;
+	}
+	return $classes;
+}
+add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
