@@ -128,10 +128,6 @@
         }
     }
 
-    .no-scroll {
-        overflow: hidden;
-    }
-
     .grid-col-none {
         grid-column: none;
     }

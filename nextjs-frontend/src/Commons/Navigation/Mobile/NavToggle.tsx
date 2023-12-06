@@ -4,7 +4,7 @@ import INavButton from '@/DataTransferObjects/Models/NavButton/INavButton';
 
 const NavToggle = ({ isNavOpen, setIsNavOpen }: INavButton) => {
 	const preventBodyScroll = () => {
-		document.body.classList.toggle('no-scroll');
+		document.body.classList.toggle('overflow-hidden');
 	};
 	return (
 		<button
