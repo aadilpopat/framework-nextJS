@@ -1,8 +1,8 @@
 import React from 'react';
 import HeaderHero from '@/Components/HeaderHero/HeaderHero';
-import TextBlock from '@/Components/TextBlock/TextBlock';
-import ImageGrid from '@/Components/ImageGrid/ImageGrid';
-import Accordion from '@/Components/Accordion/Accordion';
+import ImageGrid from '@/Components/PageBlocks/ImageGrid/ImageGrid';
+import TextBlock from '@/Components/PageBlocks/TextBlock/TextBlock';
+import Accordion from '@/Components/PageBlocks/Accordion/Accordion';
 
 const Home = () => (
 	<main>

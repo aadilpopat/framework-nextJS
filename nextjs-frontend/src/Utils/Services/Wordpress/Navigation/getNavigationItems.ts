@@ -1,5 +1,5 @@
 import fetchAPI from '@/Utils/Services/Wordpress';
-import INavigationItems from '@/DataTransferObjects/Models/INavigationItems/INavigationItems';
+import INavigationItemsWPResponse from '@/DataTransferObjects/Models/INavigationItems/INavigationItemsWPResponse';
 
 const getNavigationItems = async (menuName: string) => {
 	const requestQuery: string = `
@@ -18,7 +18,7 @@ const getNavigationItems = async (menuName: string) => {
 		}
 	}`;
 
-	const data = await fetchAPI<INavigationItems>(requestQuery, {
+	const data = await fetchAPI<INavigationItemsWPResponse>(requestQuery, {
 		variables: { id: menuName },
 	});
 	return data.menu;

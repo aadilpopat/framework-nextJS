@@ -1,13 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/*@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');*/
 
 @layer base {
-    html {
-        font-family: 'Open Sans', system-ui, sans-serif;
-    }
-
     .text-heading-large {
         @apply text-heading-l;
     }
@@ -22,10 +17,6 @@
 
     .text-site-logo {
         @apply text-site-logo-text uppercase;
-    }
-
-    .grid-col-none {
-        grid-column: none;
     }
 
     @screen md {
@@ -115,40 +106,33 @@
             content: url('/images/framework-logo-disabled.svg');
         }
     }
+}
 
-    @media (min-width: 640px) {
-        .extend-right {
-            margin-right: 0;
+@layer utilities {
+    .extend-right {
+        @apply mr-0;
+        @screen sm {
             margin-left: calc(50vw - 330px);
         }
-    }
-
-    @media (min-width: 768px) {
-        .extend-right {
-            margin-right: 0;
+        @screen md {
             margin-left: calc(50vw - 394px);
         }
-    }
-
-    @media (min-width: 1024px) {
-        .extend-right {
-            margin-right: 0;
+        @screen lg {
             margin-left: calc(50vw - 522px);
         }
-    }
-
-    @media (min-width: 1280px) {
-        .extend-right {
-            margin-right: 0;
+        @screen xl {
             margin-left: calc(50vw - 650px);
         }
-    }
-
-    @media (min-width: 1536px) {
-        .extend-right {
-            margin-right: 0;
+        @screen 2xl {
             margin-left: calc(50vw - 776px);
         }
     }
 
+    .no-scroll {
+        overflow: hidden;
+    }
+
+    .grid-col-none {
+        grid-column: none;
+    }
 }
