@@ -82,7 +82,7 @@
     }
 
     .footer-link a {
-        @apply text-green-100 text-copy md:text-button-2 ;
+        @apply text-green-100 text-copy md:text-button-2 block w-fit;
 
         &:after {
             content: '';
