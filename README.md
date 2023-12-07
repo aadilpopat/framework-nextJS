@@ -24,7 +24,7 @@ Find the endpoint in the GraphQL Settings section of the WordPress dashboard. WP
 
 ```
 npm ci
-npm build
+npm run build
 npm start
 ```
 
