@@ -68,7 +68,7 @@
     }
 
     .button-2 a {
-        @apply text-heading-m md:text-button-2;
+        @apply text-heading-m md:text-button-2 inline-block w-fit;
 
         &:after {
             content: '';
@@ -82,7 +82,7 @@
     }
 
     .footer-link a {
-        @apply text-green-100 text-copy md:text-button-2 block w-fit;
+        @apply text-green-100 text-copy md:text-button-2 inline-block w-fit;
 
         &:after {
             content: '';
